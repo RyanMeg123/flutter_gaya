@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gaya_2/routes.dart';
 
-import 'features/splash/views/splash_page.dart';
-import 'features/home/views/home_page.dart';
-
 void main() {
   runApp(const MyApp());
 }

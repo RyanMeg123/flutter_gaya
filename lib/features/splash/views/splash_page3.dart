@@ -7,10 +7,8 @@ class SplashPage3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
     const designHeight = 812;
-    const deignWidth = 375;
     Size screenSize = MediaQuery.of(context).size;
     double imageWidth = screenSize.width * 75 / 375; // 375 是 iPhone XS Max 的宽度
     double imageHeight =

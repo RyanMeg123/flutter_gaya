@@ -3,7 +3,6 @@ import 'package:flutter_gaya_2/features/home/views/home_page.dart';
 
 import 'auth/views/login_page.dart';
 import 'auth/views/register_email_page.dart';
-import 'features/home/views/home_page.dart';
 import 'features/splash/views/splash_page.dart';
 
 class AppRoutes {

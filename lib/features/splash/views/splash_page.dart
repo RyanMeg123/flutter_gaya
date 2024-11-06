@@ -12,8 +12,6 @@ class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
 
   @override
-  // TODO: implement createState
-  // ignore: library_private_types_in_public_api
   _SplashPageState createState() => _SplashPageState();
 }
 
@@ -22,10 +20,8 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
     const designHeight = 812;
-    const deignWidth = 375;
     return ChangeNotifierProvider(
       create: (_) => SplashController(),
       child: Consumer<SplashController>(builder: (context, controller, child) {
