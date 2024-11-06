@@ -74,6 +74,7 @@ flutter:
   - assets/images/splash/logo.png
   - assets/images/splash/iconGoogle.png
   - assets/images/splash/iconfb.png
+  - assets/images/login/logomini.png
 
 
   # The following line ensures that the Material Icons font is
