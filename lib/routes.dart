@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gaya_2/features/home/views/home_page.dart';
+import 'package:flutter_gaya_2/features/home/home_page.dart';
 
 import 'auth/views/login_page.dart';
 import 'auth/views/register_email_page.dart';
