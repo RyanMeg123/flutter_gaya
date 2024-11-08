@@ -17,19 +17,16 @@ class _CustomCarouselState extends State<CustomCarousel> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
       child: Column(
         children: [
           const SizedBox(height: 18),
           CarouselSlider.builder(
             itemCount: widget.imgList.length,
             itemBuilder: (context, index, realIndex) {
-              bool isCenterItem = index == _currentIndex;
               return AnimatedContainer(
                 duration: const Duration(microseconds: 8),
                 // margin: const EdgeInsets.symmetric(horizontal: 8),
                 decoration: BoxDecoration(
-                  color: isCenterItem ? Colors.red : Colors.amber,
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: ClipRRect(
@@ -43,6 +40,7 @@ class _CustomCarouselState extends State<CustomCarousel> {
               );
             },
             options: CarouselOptions(
+              autoPlay: true,
               height: 174,
               aspectRatio: 16 / 9,
               // viewportFraction: 0.7,
