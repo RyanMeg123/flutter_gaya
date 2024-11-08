@@ -113,32 +113,36 @@ class _HomeTabAppBarState extends State<HomeTabAppBar> {
               ],
             ),
             const SizedBox(height: 23),
-            TextField(
-              focusNode: _focusNode, // 设置 FocusNode
-              controller: _controller,
-              decoration: InputDecoration(
-                filled: true, // 背景填充颜色
-                fillColor: const Color.fromRGBO(239, 239, 239, 1),
-                hintText: 'Search...',
-                enabledBorder: const OutlineInputBorder(
-                  borderSide:
-                      BorderSide(color: Colors.white, width: 1), // 非选中时的边框
+            SizedBox(
+              height: 54,
+              child: TextField(
+                focusNode: _focusNode, // 设置 FocusNode
+                controller: _controller,
+                decoration: InputDecoration(
+                  filled: true, // 背景填充颜色
+                  fillColor: const Color.fromRGBO(239, 239, 239, 1),
+                  hintText: 'Search...',
+                  enabledBorder: const OutlineInputBorder(
+                    borderSide:
+                        BorderSide(color: Colors.white, width: 1), // 非选中时的边框
+                  ),
+                  focusedBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: Color.fromRGBO(43, 57, 185, 1),
+                        width: 1), // 选中时的边框
+                  ),
+                  suffixIcon: _controller.text.isNotEmpty
+                      ? IconButton(
+                          icon: const Icon(CupertinoIcons.clear),
+                          onPressed: _clearSearch,
+                        )
+                      : null,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(18),
+                  ),
                 ),
-                focusedBorder: const OutlineInputBorder(
-                  borderSide:
-                      BorderSide(color: Colors.green, width: 1), // 选中时的边框
-                ),
-                suffixIcon: _controller.text.isNotEmpty
-                    ? IconButton(
-                        icon: const Icon(CupertinoIcons.clear),
-                        onPressed: _clearSearch,
-                      )
-                    : null,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(18),
-                ),
+                onChanged: widget.onSearchChanged,
               ),
-              onChanged: widget.onSearchChanged,
             ),
           ],
         ),
