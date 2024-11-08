@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../controllers/splash_controller.dart';
@@ -57,7 +58,7 @@ class _SplashPageState extends State<SplashPage> {
                   onPressed: () {
                     Navigator.pushReplacementNamed(context, '/home');
                   },
-                  child: const Icon(Icons.arrow_forward),
+                  child: const Icon(CupertinoIcons.back),
                 )
               : null,
         );

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -34,7 +35,7 @@ class _RegisterEmailPageState extends State<RegisterEmailPage> {
       appBar: AppBar(
         toolbarHeight: 44,
         leading: IconButton(
-          icon: Icon(MdiIcons.arrowLeft), // 左上角的返回图标
+          icon: const Icon(CupertinoIcons.back), // 左上角的返回图标
           onPressed: () {
             // 返回上一页
             Navigator.pop(context);
